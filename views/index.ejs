@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zajel Ticket</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="head">
+            <img class="zajel" src="/images/zajel.png" alt="">
+            <button class="header-btn">Ship Now</button>
+        </div>
+    </header>
+    <section class="hero-section">
+    </section>
+    <div class="form-body">
+        <form action="/" method="post">
+            <div id="zajel_ticket">
+                <label for="Subject">Subject</label>
+                <input type="text" id="Subject" name="subject" placeholder="Subject" autocomplete="off" required>
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="4" cols="50" autocomplete="off" required></textarea>
+                <label for="Priority">Priority</label><br>
+                <select name="priority" id="Priority" required>
+                    <option value="" disabled selected>Please Select Priority</option>
+                    <option value="low">Low</option>
+                    <option value="normal">Normal</option>
+                    <option value="high">High</option>
+                    <option value="urgent">Urgent</option>
+                </select><br>
+                <label for="Department">Department</label><br>
+                <select name="department" id="Department" onchange="get_department(this);" required>
+                    <option value="" disabled selected>Please Select Department</option>
+                    <option value="it">IT</option>
+                    <option value="operation">Operation</option>
+                    <option value="customer_service">Customer Service</option>
+                    <option value="sales">Sales</option>
+                    <option value="accounts">Accounts</option>
+                    <option value="hr">HR</option>
+                    <option value="marketing">Marketing</option>
+                </select><br>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+<script src="/script.js"></script>
+
+</html>
